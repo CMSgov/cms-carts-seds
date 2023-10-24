@@ -36,3 +36,4 @@ jobs:
           #jira-custom-fields: '{ "customfield_14154" : [{"id": "16955", "value": "CARTS"}] }'
           aws-severities: CRITICAL, HIGH, MEDIUM
           assign-jira-ticket-to: ${{ secrets.ACCOUNT_ID_REHMAN }}
+          is_jira_enterprise: true
