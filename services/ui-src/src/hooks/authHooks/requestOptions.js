@@ -7,7 +7,7 @@ async function requestOptions(body = null) {
       throw new Error("Missing API Key from auth session.");
     }
     const options = {
-      headers: { "x-api-key": apiKey },
+      // headers: { "x-api-key": apiKey },
     };
     if (body) {
       options["body"] = body;
