@@ -1,5 +1,4 @@
 /* eslint-disable no-underscore-dangle, no-console */
-import axios from "../authenticatedAxios";
 import requestOptions from "../hooks/authHooks/requestOptions";
 import { getProgramData, getStateData, getUserData } from "../store/stateUser";
 import { apiLib } from "../util/apiLib";
@@ -119,34 +118,6 @@ export const getStateAllStatuses =
         {}
       );
     dispatch({ type: SET_STATE_STATUSES, payload });
-  };
-
-export const getStateStatus =
-  ({ stateCode }) =>
-  async (dispatch, getState) => {
-    const { data } = await axios.get(`/state_status/`);
-    const year = +getState().global.formYear;
-
-    // Get the latest status for this state.
-    const payload = data
-      .filter((status) => status.state === stateCode && status.year === year)
-      .sort((a, b) => (a.year < b.year ? 1 : -1))
-      .pop();
-
-    if (payload) {
-      dispatch({
-        type: SET_STATE_STATUS,
-        payload,
-      });
-    } else {
-      const { data: newData } = await axios.post(`/state_status/`, {
-        lastChanged: new Date(),
-        state: stateCode,
-        status: "in_progress",
-        year,
-      });
-      dispatch({ type: SET_STATE_STATUS, payload: newData });
-    }
   };
 
 export const loadSections = ({ stateCode, selectedYear }) => {

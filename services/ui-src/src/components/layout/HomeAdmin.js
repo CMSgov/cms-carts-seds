@@ -1,9 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, Route } from "react-router-dom";
-import JobCodeRoleAssociations from "../utils/JobCodeRoleAssociations";
-import StateAssociations from "../utils/StateAssociations";
-import UserRoleAssociations from "../utils/UserRoleAssociations";
 import FormTemplates from "./FormTemplates";
 import CMSHomepage from "../sections/homepage/CMSHomepage";
 import InvokeSection from "../utils/InvokeSection";
@@ -49,13 +46,6 @@ const AdminHome = () => {
           <Sidebar />
           <InvokeSection />
         </Route>
-        <Route exact path="/state_assoc" component={StateAssociations} />
-        <Route exact path="/role_user_assoc" component={UserRoleAssociations} />
-        <Route
-          exact
-          path="/role_jobcode_assoc"
-          component={JobCodeRoleAssociations}
-        />
         <Route exact path="/state-reports" component={CMSHomepage} />
         <Route exact path="/templates" component={FormTemplates} />
       </Switch>

@@ -9,6 +9,7 @@ import App from "./App";
 import { Amplify } from "aws-amplify";
 import config from "./config";
 import { asyncWithLDProvider } from "launchdarkly-react-client-sdk";
+import { fetchAuthSession } from "aws-amplify/auth";
 
 // Internet Explorer
 const isIE = /*@cc_on!@*/ false || !!document.documentMode;
@@ -24,6 +25,11 @@ Amplify.configure({
   },
   API: {
     REST: {
+      headers: async () => {
+        return {
+          Authorization: (await fetchAuthSession()).tokens?.idToken?.toString(),
+        };
+      },
       "carts-api": {
         endpoint: config.apiGateway.URL,
         region: config.apiGateway.REGION,

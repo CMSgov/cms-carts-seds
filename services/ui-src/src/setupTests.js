@@ -14,9 +14,7 @@ import Adapter from "enzyme-adapter-react-16";
 
 configure({ adapter: new Adapter() });
 
-global.window.env = {
-  API_POSTGRES_URL: "fakeurl",
-};
+global.window.env = {};
 
 Object.defineProperty(window, "matchMedia", {
   writable: true,
