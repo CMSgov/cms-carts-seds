@@ -5,6 +5,7 @@ const STAGE = process.env.STAGE;
 const kafka = new Kafka({
   clientId: `carts-${STAGE}`,
   brokers: process.env.BOOTSTRAP_BROKER_STRING_TLS.split(","),
+  enforceRequestTimeout: false,
   retry: {
     initialRetryTime: 300,
     retries: 8,
@@ -49,7 +50,7 @@ class KafkaSourceLib {
     }
   }
 
-  doUnmarshall(r) {
+  dynamoUnmarshall(r) {
     return unmarshall(r);
   }
 
@@ -61,9 +62,9 @@ class KafkaSourceLib {
     const dynamodb = record.dynamodb;
     const { eventID, eventName } = record;
     const dynamoRecord = {
-      NewImage: this.doUnmarshall(dynamodb.NewImage),
-      OldImage: this.doUnmarshall(dynamodb.OldImage ?? {}),
-      Keys: this.doUnmarshall(dynamodb.Keys),
+      NewImage: this.dynamoUnmarshall(dynamodb.NewImage),
+      OldImage: this.dynamoUnmarshall(dynamodb.OldImage ?? {}),
+      Keys: this.dynamoUnmarshall(dynamodb.Keys),
     };
     return {
       key: Object.values(dynamoRecord.Keys).join("#"),

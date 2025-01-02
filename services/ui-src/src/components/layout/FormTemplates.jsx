@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "react-data-table-component-extensions/dist/index.css";
 import { Button } from "@cmsgov/design-system";
 import { useHistory } from "react-router-dom";
 import { apiLib } from "../../util/apiLib";

@@ -1,7 +1,7 @@
 import React from "react";
 import { Provider } from "react-redux";
 import { shallow } from "enzyme";
-import { MemoryRouter } from "react-router";
+import { MemoryRouter } from "react-router-dom";
 import configureMockStore from "redux-mock-store";
 import CertifyAndSubmit from "./CertifyAndSubmit";
 import { screen, render } from "@testing-library/react";

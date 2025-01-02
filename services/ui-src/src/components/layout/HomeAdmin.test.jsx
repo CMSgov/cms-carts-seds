@@ -1,7 +1,7 @@
 import React from "react";
 import { mount, shallow } from "enzyme";
 import Home from "./Home";
-import { MemoryRouter } from "react-router";
+import { MemoryRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import configureMockStore from "redux-mock-store";
 import { mockInitialState } from "../../util/testing/testUtils";

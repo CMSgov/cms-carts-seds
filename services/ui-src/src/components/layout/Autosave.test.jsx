@@ -1,7 +1,7 @@
 import React from "react";
 import Autosave from "./Autosave";
 import { Provider } from "react-redux";
-import { MemoryRouter } from "react-router";
+import { MemoryRouter } from "react-router-dom";
 import configureMockStore from "redux-mock-store";
 import { mount, shallow } from "enzyme";
 import SaveMessage from "./SaveMessage";

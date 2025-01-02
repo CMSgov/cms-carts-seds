@@ -5,7 +5,7 @@ import configureMockStore from "redux-mock-store";
 import Print from "./Print";
 import { mockInitialState } from "../../util/testing/testUtils";
 import { screen, render } from "@testing-library/react";
-import { MemoryRouter } from "react-router";
+import { MemoryRouter } from "react-router-dom";
 import thunk from "redux-thunk";
 
 jest.mock("../layout/Section", () => () => {

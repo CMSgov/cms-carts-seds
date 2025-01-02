@@ -2,7 +2,7 @@ import React from "react";
 import { shallow } from "enzyme";
 import FormNavigation from "./FormNavigation";
 import { stateUserWithReportInProgress } from "../../store/fakeStoreExamples";
-import { MemoryRouter } from "react-router";
+import { MemoryRouter } from "react-router-dom";
 import configureMockStore from "redux-mock-store";
 import { Provider } from "react-redux";
 import { screen, render } from "@testing-library/react";

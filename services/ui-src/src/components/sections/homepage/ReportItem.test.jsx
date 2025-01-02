@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow, mount } from "enzyme";
-import { MemoryRouter } from "react-router";
+import { MemoryRouter } from "react-router-dom";
 import { screen, render, fireEvent } from "@testing-library/react";
 import configureMockStore from "redux-mock-store";
 import ReportItem from "./ReportItem";

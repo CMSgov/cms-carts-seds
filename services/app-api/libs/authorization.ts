@@ -1,5 +1,5 @@
 import { SSMClient, GetParameterCommand } from "@aws-sdk/client-ssm";
-import jwt_decode from "jwt-decode";
+import { jwtDecode } from "jwt-decode";
 import { IdmRoles, AppRoles, APIGatewayProxyEvent } from "../types";
 import { CognitoJwtVerifier } from "aws-jwt-verify";
 import { logger } from "../libs/debug-lib";
@@ -91,7 +91,7 @@ export const isAuthorized = async (event: APIGatewayProxyEvent) => {
   const requestState = event.pathParameters?.state;
 
   // If a state user, always reject if their state does not match a state query param
-  const decoded = jwt_decode(event.headers["x-api-key"]) as DecodedToken;
+  const decoded = jwtDecode(event.headers["x-api-key"]) as DecodedToken;
   const idmRole = decoded["custom:cms_roles"]
     .split(",")
     .find((r) => r.includes("mdctcarts")) as IdmRoles;
@@ -107,7 +107,7 @@ export const getUserNameFromJwt = (event: APIGatewayProxyEvent) => {
   let userName = "branchUser";
   if (!event.headers?.["x-api-key"]) return userName;
 
-  const decoded = jwt_decode(event.headers["x-api-key"]) as DecodedToken;
+  const decoded = jwtDecode(event.headers["x-api-key"]) as DecodedToken;
 
   if (decoded["given_name"] && decoded["family_name"]) {
     userName = `${decoded["given_name"]} ${decoded["family_name"]}`;
@@ -125,7 +125,7 @@ export const getUserNameFromJwt = (event: APIGatewayProxyEvent) => {
 export const getUserCredentialsFromJwt = (event: APIGatewayProxyEvent) => {
   if (!event?.headers || !event.headers?.["x-api-key"])
     return new UserCredentials();
-  const decoded = jwt_decode(event.headers["x-api-key"]) as DecodedToken;
+  const decoded = jwtDecode(event.headers["x-api-key"]) as DecodedToken;
   const credentials = new UserCredentials(decoded);
   return credentials;
 };

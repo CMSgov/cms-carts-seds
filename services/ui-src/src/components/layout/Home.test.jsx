@@ -6,7 +6,7 @@ import HomeAdmin from "./HomeAdmin";
 import Unauthorized from "./Unauthorized";
 import CMSHome from "./HomeCMS";
 import StateHome from "./HomeState";
-import { MemoryRouter } from "react-router";
+import { MemoryRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import configureMockStore from "redux-mock-store";
 

@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 import configureMockStore from "redux-mock-store";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
-import { MemoryRouter } from "react-router";
+import { MemoryRouter } from "react-router-dom";
 // components
 import CMSHomepage from "./CMSHomepage";
 // mocks

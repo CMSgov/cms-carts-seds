@@ -1,6 +1,5 @@
 import React from "react";
-import { Link, Route } from "react-router-dom";
-import { Switch } from "react-router";
+import { Link, Route, Switch } from "react-router-dom";
 // components
 import FormTemplates from "./FormTemplates";
 import CMSHomepage from "../sections/homepage/CMSHomepage";

@@ -877,12 +877,12 @@
   {
     "stateId": "FL",
     "fiscalYear": 2024,
-    "enhancedFmap": 72
+    "enhancedFmap": 70.57
   },
   {
     "stateId": "GA",
     "fiscalYear": 2024,
-    "enhancedFmap": 76.8
+    "enhancedFmap": 76.12
   },
   {
     "stateId": "GU",
@@ -892,12 +892,12 @@
   {
     "stateId": "HI",
     "fiscalYear": 2024,
-    "enhancedFmap": 67.55
+    "enhancedFmap": 70.99
   },
   {
     "stateId": "ID",
     "fiscalYear": 2024,
-    "enhancedFmap": 79.15
+    "enhancedFmap": 78.8
   },
   {
     "stateId": "IL",
@@ -907,32 +907,32 @@
   {
     "stateId": "IN",
     "fiscalYear": 2024,
-    "enhancedFmap": 76.41
+    "enhancedFmap": 75.93
   },
   {
     "stateId": "IA",
     "fiscalYear": 2024,
-    "enhancedFmap": 73.5
+    "enhancedFmap": 74.89
   },
   {
     "stateId": "KS",
     "fiscalYear": 2024,
-    "enhancedFmap": 72.11
+    "enhancedFmap": 72.68
   },
   {
     "stateId": "KY",
     "fiscalYear": 2024,
-    "enhancedFmap": 80.93
+    "enhancedFmap": 80.25
   },
   {
     "stateId": "LA",
     "fiscalYear": 2024,
-    "enhancedFmap": 77.61
+    "enhancedFmap": 77.37
   },
   {
     "stateId": "ME",
     "fiscalYear": 2024,
-    "enhancedFmap": 74.8
+    "enhancedFmap": 73.86
   },
   {
     "stateId": "MD",
@@ -947,37 +947,37 @@
   {
     "stateId": "MI",
     "fiscalYear": 2024,
-    "enhancedFmap": 75.84
+    "enhancedFmap": 75.46
   },
   {
     "stateId": "MN",
     "fiscalYear": 2024,
-    "enhancedFmap": 65.36
+    "enhancedFmap": 66.04
   },
   {
     "stateId": "MS",
     "fiscalYear": 2024,
-    "enhancedFmap": 84.82
+    "enhancedFmap": 84.09
   },
   {
     "stateId": "MO",
     "fiscalYear": 2024,
-    "enhancedFmap": 76.45
+    "enhancedFmap": 76.25
   },
   {
     "stateId": "MT",
     "fiscalYear": 2024,
-    "enhancedFmap": 75.43
+    "enhancedFmap": 74.74
   },
   {
     "stateId": "NE",
     "fiscalYear": 2024,
-    "enhancedFmap": 70.46
+    "enhancedFmap": 71.02
   },
   {
     "stateId": "NV",
     "fiscalYear": 2024,
-    "enhancedFmap": 73.81
+    "enhancedFmap": 72.54
   },
   {
     "stateId": "NH",
@@ -992,7 +992,7 @@
   {
     "stateId": "NM",
     "fiscalYear": 2024,
-    "enhancedFmap": 81.6
+    "enhancedFmap": 80.81
   },
   {
     "stateId": "NY",
@@ -1002,32 +1002,32 @@
   {
     "stateId": "NC",
     "fiscalYear": 2024,
-    "enhancedFmap": 77.36
+    "enhancedFmap": 76.14
   },
   {
     "stateId": "ND",
     "fiscalYear": 2024,
-    "enhancedFmap": 67.51
+    "enhancedFmap": 67.67
   },
   {
     "stateId": "OH",
     "fiscalYear": 2024,
-    "enhancedFmap": 74.87
+    "enhancedFmap": 75.01
   },
   {
     "stateId": "OK",
     "fiscalYear": 2024,
-    "enhancedFmap": 77.82
+    "enhancedFmap": 77.27
   },
   {
     "stateId": "OR",
     "fiscalYear": 2024,
-    "enhancedFmap": 72.15
+    "enhancedFmap": 71.52
   },
   {
     "stateId": "PA",
     "fiscalYear": 2024,
-    "enhancedFmap": 66.88
+    "enhancedFmap": 67.88
   },
   {
     "stateId": "PR",
@@ -1037,37 +1037,37 @@
   {
     "stateId": "RI",
     "fiscalYear": 2024,
-    "enhancedFmap": 68.42
+    "enhancedFmap": 68.51
   },
   {
     "stateId": "SC",
     "fiscalYear": 2024,
-    "enhancedFmap": 79.53
+    "enhancedFmap": 78.67
   },
   {
     "stateId": "SD",
     "fiscalYear": 2024,
-    "enhancedFmap": 71.08
+    "enhancedFmap": 68.49
   },
   {
     "stateId": "TN",
     "fiscalYear": 2024,
-    "enhancedFmap": 76.45
+    "enhancedFmap": 75.7
   },
   {
     "stateId": "TX",
     "fiscalYear": 2024,
-    "enhancedFmap": 72.56
+    "enhancedFmap": 72.11
   },
   {
     "stateId": "UT",
     "fiscalYear": 2024,
-    "enhancedFmap": 76.78
+    "enhancedFmap": 76.13
   },
   {
     "stateId": "VT",
     "fiscalYear": 2024,
-    "enhancedFmap": 69.53
+    "enhancedFmap": 69.73
   },
   {
     "stateId": "VI",
@@ -1077,7 +1077,7 @@
   {
     "stateId": "VA",
     "fiscalYear": 2024,
-    "enhancedFmap": 65.0
+    "enhancedFmap": 65.85
   },
   {
     "stateId": "WA",
@@ -1087,12 +1087,12 @@
   {
     "stateId": "WV",
     "fiscalYear": 2024,
-    "enhancedFmap": 82.28
+    "enhancedFmap": 81.87
   },
   {
     "stateId": "WI",
     "fiscalYear": 2024,
-    "enhancedFmap": 82.28
+    "enhancedFmap": 72.46
   },
   {
     "stateId": "WY",

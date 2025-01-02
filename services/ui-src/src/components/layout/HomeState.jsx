@@ -1,6 +1,5 @@
 import React from "react";
-import { Switch } from "react-router";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import CertifyAndSubmit from "./CertifyAndSubmit";
 import Homepage from "../sections/homepage/Homepage";
 import InvokeSection from "../utils/InvokeSection";

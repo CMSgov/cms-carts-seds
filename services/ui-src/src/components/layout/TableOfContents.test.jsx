@@ -9,7 +9,7 @@ import {
   stateUserWithReportInProgress,
 } from "../../store/fakeStoreExamples";
 import { screen, render, fireEvent } from "@testing-library/react";
-import { MemoryRouter } from "react-router";
+import { MemoryRouter } from "react-router-dom";
 
 const mockStore = configureMockStore();
 const formState = {
