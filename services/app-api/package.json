@@ -32,7 +32,7 @@
     "@aws-sdk/lib-dynamodb": "^3.731.1",
     "@aws-sdk/s3-request-presigner": "^3.731.1",
     "aws-jwt-verify": "^4.0.1",
-    "dompurify": "^3.2.1",
+    "dompurify": "^3.2.3",
     "jsdom": "^25.0.1",
     "jsonpath-plus": "^10.2.0",
     "jsonschema": "^1.4.1",
