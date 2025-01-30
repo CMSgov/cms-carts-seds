@@ -5,10 +5,11 @@ import { Provider } from "react-redux";
 import { screen, render, fireEvent } from "@testing-library/react";
 import Timeout from "./Timeout";
 import { add, sub } from "date-fns";
+import { MemoryRouter } from "react-router-dom";
 
 jest.mock("react-router-dom", () => ({
   ...jest.requireActual("react-router-dom"),
-  useHistory: () => ({
+  useNavigate: () => ({
     listen: jest.fn().mockReturnValue(() => {}),
   }),
 }));
@@ -34,17 +35,23 @@ const hiddenStore = mockStore({
 });
 const timeout = (
   <Provider store={store}>
-    <Timeout />
+    <MemoryRouter>
+      <Timeout />
+    </MemoryRouter>
   </Provider>
 );
 const expiredTimeout = (
   <Provider store={expiredStore}>
-    <Timeout />
+    <MemoryRouter>
+      <Timeout />
+    </MemoryRouter>
   </Provider>
 );
 const hiddenTimeout = (
   <Provider store={hiddenStore}>
-    <Timeout />
+    <MemoryRouter>
+      <Timeout />
+    </MemoryRouter>
   </Provider>
 );
 

@@ -21,6 +21,8 @@ jest.mock("../utils/InvokeSection", () => () => {
   return <MockName />;
 });
 
+window.scrollTo = jest.fn();
+
 describe("Home CMS Component", () => {
   it("should render correctly", () => {
     expect(shallow(<Home />).exists()).toBe(true);
@@ -38,7 +40,7 @@ describe("Home CMS Component", () => {
         </MemoryRouter>
       </Provider>
     );
-    expect(wrapper.containsMatchingElement(<Unauthorized />)).toEqual(true);
+    expect(wrapper.containsMatchingElement(Unauthorized)).toEqual(true);
   });
   it.each([
     ["/views/sections/pa/2022/3/2", <InvokeSection />],

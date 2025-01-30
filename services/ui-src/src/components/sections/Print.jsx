@@ -179,7 +179,7 @@ const Print = () => {
       <div className="print-directions">
         <p>Click below to print full CARTS report shown here</p>
         <Button
-          className="ds-c-button--primary ds-c-button--large print-all-btn"
+          className="ds-c-button--solid ds-c-button--large print-all-btn"
           onClick={getPdfFriendlyDocument}
           title="Print"
         >
@@ -195,7 +195,7 @@ const Print = () => {
       </Helmet>
       {sections}
       <Button
-        className="ds-c-button--primary ds-c-button--large print-all-btn"
+        className="ds-c-button--solid ds-c-button--large print-all-btn"
         onClick={getPdfFriendlyDocument}
         title="Print"
       >

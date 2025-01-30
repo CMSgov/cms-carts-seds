@@ -179,7 +179,7 @@ const CMSHomepage = () => {
                     <Button
                       type="button"
                       data-cy="cms-homepage-filter-submit"
-                      className="ds-c-button ds-c-button--primary filter-button"
+                      className="ds-c-button ds-c-button--solid filter-button"
                       onClick={() => filterReports()}
                     >
                       Filter
@@ -187,7 +187,7 @@ const CMSHomepage = () => {
                     <Button
                       type="button"
                       data-cy="cms-homepage-filter-clear"
-                      className="ds-c-button ds-c-button--primary filter-button"
+                      className="ds-c-button ds-c-button--solid filter-button"
                       onClick={() => clearFilter()}
                     >
                       Clear

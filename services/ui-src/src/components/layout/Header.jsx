@@ -107,7 +107,7 @@ export const Header = () => {
                       <li>
                         <a
                           data-testid={"headerDropDownMenuButton"}
-                          href="#menu"
+                          href="javascript:void(0);"
                           onClick={() => setIsMenuOpen(!isMenuOpen)}
                         >
                           <FontAwesomeIcon icon={faUser} size="lg" />

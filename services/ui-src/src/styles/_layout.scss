@@ -49,7 +49,10 @@ div[hidden] {
 }
 
 .app-content {
-  flex: 1 0 auto;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .user-profiles {

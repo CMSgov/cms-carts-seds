@@ -26,6 +26,8 @@ jest.mock("../utils/InvokeSection", () => () => {
   return <MockName />;
 });
 
+window.scrollTo = jest.fn();
+
 describe("Home State Component", () => {
   it("should render correctly", () => {
     expect(shallow(<Home />).exists()).toBe(true);
@@ -43,7 +45,7 @@ describe("Home State Component", () => {
         </MemoryRouter>
       </Provider>
     );
-    expect(wrapper.containsMatchingElement(<Unauthorized />)).toEqual(true);
+    expect(wrapper.containsMatchingElement(Unauthorized)).toEqual(true);
   });
   it.each([
     ["/sections/2022/3/2", <InvokeSection />],
