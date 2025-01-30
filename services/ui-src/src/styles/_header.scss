@@ -186,8 +186,7 @@
             content: "\f05a";
             font-family: "FontAwesome";
             display: inline-block;
-            width: 16px;
-            padding-right: (variables.$padding * 2);
+            width: 2rem;
           }
         }
       }
@@ -201,8 +200,7 @@
             content: "\f044";
             font-family: "FontAwesome";
             display: inline-block;
-            width: 16px;
-            padding-right: (variables.$padding * 2);
+            width: 2rem;
           }
         }
       }
@@ -223,6 +221,9 @@
           font-weight: normal;
           color: #fff;
           padding: (variables.$padding * 2) (variables.$padding * 12.25) (variables.$padding * 1.5) variables.$padding;
+          @media screen and (min-width: 768px) {
+            padding-left: 0;
+          }
           &:hover {
             color: #8ed2e5;
           }
@@ -230,8 +231,11 @@
             content: "\f08b";
             font-family: "FontAwesome";
             display: inline-block;
-            width: 16px;
-            padding-right: (variables.$padding * 2);
+            width: 2rem;
+            margin-right: 0;
+            @media screen and (min-width: 768px) {
+              margin-right: variables.$margin;
+            }
           }
         }
       }
@@ -247,11 +251,12 @@
   USA BANNER
 **********************/
 .usabanner-section-layout {
-  margin-left: auto;
-  margin-right: auto;
-  background-color: variables.$color-gray-lightest;
-  max-width: 1040px;
-  padding-left: 16px;
+  margin-inline: auto;
+  max-width: var(--site-max-width);
+  padding-inline: calc(var(--grid-gutter-width)* 0.5);
+  @media (min-width: 544px) {
+        padding-inline: 0;
+}
 }
 
 /**********************

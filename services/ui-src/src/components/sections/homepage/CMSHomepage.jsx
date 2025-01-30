@@ -118,7 +118,7 @@ const CMSHomepage = () => {
 
   return (
     <main className="homepage ds-l-col--12">
-      <div className="ds-l-container-large">
+      <div className="ds-l-container-large ds-content">
         {currentUserRole !== AppRoles.CMS_ADMIN ? (
           <div className="ds-l-row ds-u-padding-left--2">
             <h1 className="page-title ds-u-margin-bottom--0">
@@ -179,7 +179,7 @@ const CMSHomepage = () => {
                     <Button
                       type="button"
                       data-cy="cms-homepage-filter-submit"
-                      className="ds-c-button ds-c-button--primary filter-button"
+                      className="ds-c-button ds-c-button--solid filter-button"
                       onClick={() => filterReports()}
                     >
                       Filter
@@ -187,7 +187,7 @@ const CMSHomepage = () => {
                     <Button
                       type="button"
                       data-cy="cms-homepage-filter-clear"
-                      className="ds-c-button ds-c-button--primary filter-button"
+                      className="ds-c-button ds-c-button--solid filter-button"
                       onClick={() => clearFilter()}
                     >
                       Clear
@@ -196,7 +196,7 @@ const CMSHomepage = () => {
                 </div>
               </div>
               <div className="ds-l-row">
-                <legend className="ds-u-padding--2 ds-h3">All Reports</legend>
+                <h3 className="ds-u-padding--2">All Reports</h3>
               </div>
               <div className="report-header ds-l-row">
                 <div className="name ds-l-col--1">Year</div>

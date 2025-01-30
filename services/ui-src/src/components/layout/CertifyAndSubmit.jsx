@@ -34,7 +34,8 @@ const Submit = ({ openCertifyConfirmation }) => (
     <Button
       data-testid="certifySubmit"
       onClick={openCertifyConfirmation}
-      variation="primary"
+      variation="solid"
+      className="certify-button"
     >
       Certify and Submit
     </Button>
@@ -65,7 +66,11 @@ const Thanks = ({ done: doneDispatch, submitterUsername }) => {
       </p>
       <h3>What to expect next</h3>
       <p>You‘ll hear from CMS if they have any questions about your report.</p>
-      <Button onClick={doneDispatch} variation="primary">
+      <Button
+        onClick={doneDispatch}
+        variation="solid"
+        className="return-home-button"
+      >
         Return Home
       </Button>
     </>
@@ -80,7 +85,7 @@ Thanks.propTypes = {
 const CertifyAndSubmit = () => {
   const dispatch = useDispatch();
   const history = useHistory();
-  const { isShowing, toggleModal } = useModal();
+  const { dialogOpen, showModal, hideModal } = useModal();
   const [isCertified, submitterUsername, currentUserRole, state] = useSelector(
     (state) => [
       !selectIsFormEditable(
@@ -107,7 +112,7 @@ const CertifyAndSubmit = () => {
 
   const confirmCertifyAction = () => {
     dispatch(certifyAndSubmit());
-    toggleModal();
+    hideModal();
   };
 
   const doneClick = () => {
@@ -116,42 +121,40 @@ const CertifyAndSubmit = () => {
   };
 
   return (
-    <div className="section-basic-info ds-l-col--9 content">
+    <div className="section-basic-info ds-l-col--9 ds-content">
       <main className="main">
-        {isShowing && (
-          <Dialog
-            isShowing={isShowing}
-            onExit={toggleModal}
-            heading="Certify and Submit this Report?"
-            actions={[
-              <button
-                className="ds-c-button ds-u-margin-right--1"
-                key="Review Report"
-                aria-label="Review Report"
-                onClick={toggleModal}
-              >
-                Review Report
-              </button>,
-              <button
-                className="ds-c-button ds-c-button--primary ds-u-margin-right--1"
-                key="Confirm Certify"
-                aria-label="Confirm Certify and Submit"
-                onClick={confirmCertifyAction}
-              >
-                Confirm Certify and Submit
-              </button>,
-            ]}
-          >
-            You won’t be able to make any edits after submitting, unless you
-            send a request to CMS to uncertify your report
-          </Dialog>
-        )}
+        <Dialog
+          onExit={hideModal}
+          isOpen={dialogOpen}
+          heading="Certify and Submit this Report?"
+          actions={[
+            <button
+              className="ds-c-button ds-u-margin-right--1"
+              key="Review Report"
+              aria-label="Review Report"
+              onClick={hideModal}
+            >
+              Review Report
+            </button>,
+            <button
+              className="ds-c-button ds-c-button--solid ds-u-margin-right--1"
+              key="Confirm Certify"
+              aria-label="Confirm Certify and Submit"
+              onClick={confirmCertifyAction}
+            >
+              Confirm Certify and Submit
+            </button>,
+          ]}
+        >
+          You won’t be able to make any edits after submitting, unless you send
+          a request to CMS to uncertify your report
+        </Dialog>
         <PageInfo />
         {currentUserRole === AppRoles.STATE_USER && <h2>Certify and Submit</h2>}
         {isCertified ? (
           <Thanks done={doneClick} submitterUsername={submitterUsername} />
         ) : (
-          <Submit openCertifyConfirmation={toggleModal} />
+          <Submit openCertifyConfirmation={showModal} />
         )}
       </main>
       <FormActions />

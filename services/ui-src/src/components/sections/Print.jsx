@@ -175,32 +175,34 @@ const Print = () => {
 
   // Return sections with wrapper div and print dialogue box
   return (
-    <div className="print-all">
-      <div className="print-directions">
-        <p>Click below to print full CARTS report shown here</p>
+    <div class="ds-l-container">
+      <div className="print-all ds-content">
+        <div className="print-directions">
+          <p>Click below to print full CARTS report shown here</p>
+          <Button
+            className="ds-c-button--solid ds-c-button--large print-all-btn"
+            onClick={getPdfFriendlyDocument}
+            title="Print"
+          >
+            <FontAwesomeIcon icon={faPrint} /> Print
+          </Button>
+        </div>
+        <Helmet>
+          <title>
+            {stateName} CARTS FY{formYear} Report
+          </title>
+          <meta name="author" content="CMS" />
+          <meta name="subject" content="Annual CARTS Report" />
+        </Helmet>
+        {sections}
         <Button
-          className="ds-c-button--primary ds-c-button--large print-all-btn"
+          className="ds-c-button--solid ds-c-button--large print-all-btn"
           onClick={getPdfFriendlyDocument}
           title="Print"
         >
           <FontAwesomeIcon icon={faPrint} /> Print
         </Button>
       </div>
-      <Helmet>
-        <title>
-          {stateName} CARTS FY{formYear} Report
-        </title>
-        <meta name="author" content="CMS" />
-        <meta name="subject" content="Annual CARTS Report" />
-      </Helmet>
-      {sections}
-      <Button
-        className="ds-c-button--primary ds-c-button--large print-all-btn"
-        onClick={getPdfFriendlyDocument}
-        title="Print"
-      >
-        <FontAwesomeIcon icon={faPrint} /> Print
-      </Button>
     </div>
   );
 };

@@ -24,7 +24,7 @@ const ReportItem = ({
   const anchorTarget = "_self";
   const stateCode = link1URL.toString().split("/")[3];
   const stateYear = link1URL.toString().split("/")[4];
-  const { isShowing, toggleModal } = useModal();
+  const { dialogOpen, showModal, hideModal } = useModal();
   let lastEditedNote = "";
   const isStateUser = userRole === AppRoles.STATE_USER;
 
@@ -50,7 +50,7 @@ const ReportItem = ({
 
   const uncertify = async () => {
     await dispatch(uncertifyReport(stateCode, stateYear));
-    toggleModal();
+    hideModal();
     window.location.reload(false);
   };
 
@@ -83,7 +83,7 @@ const ReportItem = ({
                   <button
                     data-testid={"uncertifyButton"}
                     className="link"
-                    onClick={toggleModal}
+                    onClick={showModal}
                   >
                     Uncertify
                   </button>
@@ -91,27 +91,25 @@ const ReportItem = ({
               )}
           </div>
 
-          {isShowing && (
-            <Dialog
-              data-testid={"uncertifyModal"}
-              isShowing={isShowing}
-              onExit={toggleModal}
-              heading="Uncertify this Report?"
-              actions={[
-                <button
-                  className="ds-c-button ds-c-button--primary ds-u-margin-right--1"
-                  key="primary"
-                  onClick={uncertify}
-                  aria-label="Uncertify this Report"
-                >
-                  Yes, Uncertify
-                </button>,
-              ]}
-            >
-              Uncertifying will send this CARTS report back to the state user
-              who submitted it
-            </Dialog>
-          )}
+          <Dialog
+            data-testid={"uncertifyModal"}
+            onExit={hideModal}
+            isOpen={dialogOpen}
+            heading="Uncertify this Report?"
+            actions={[
+              <button
+                className="ds-c-button ds-c-button--solid ds-u-margin-right--1"
+                key="primary"
+                onClick={uncertify}
+                aria-label="Uncertify this Report"
+              >
+                Yes, Uncertify
+              </button>,
+            ]}
+          >
+            Uncertifying will send this CARTS report back to the state user who
+            submitted it
+          </Dialog>
         </div>
       )}
       {isStateUser && (

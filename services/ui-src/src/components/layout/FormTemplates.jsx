@@ -47,7 +47,7 @@ const FormTemplates = () => {
         </select>
         <Button
           type="button"
-          className="ds-c-button ds-c-button--primary"
+          className="ds-c-button ds-c-button--solid"
           onClick={handleUpdateTemplates}
           disabled={inProgress}
           data-testid="generate-forms-button"

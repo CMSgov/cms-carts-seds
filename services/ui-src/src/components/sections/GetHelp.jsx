@@ -6,7 +6,7 @@ const GetHelp = () => {
   return (
     <main className="help-page ds-l-container">
       <div className="ds-l-col--12">
-        <div className="help-page-container ds-l-container">
+        <div className="help-page-container ds-l-container ds-content">
           <h1 className="help-page-title">How can we help you?</h1>
           <p>
             Question or feedback? Please email us and we will respond as soon as

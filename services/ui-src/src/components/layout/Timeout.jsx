@@ -56,37 +56,35 @@ const Timeout = () => {
   const logOutText = expired ? "Log In" : "Log Out";
   return (
     <>
-      {showTimeout && (
-        <Dialog
-          isShowing={showTimeout}
-          onExit={refreshAuth}
-          data-testid="timeout-dialog"
-          heading="You are about to be logged out."
-          actions={[
-            <button
-              className="ds-c-button ds-u-margin-right--1"
-              disabled={expired}
-              key="Stay Logged In"
-              aria-label="Stay Logged In"
-              onClick={refreshAuth}
-              data-testid="timeout-stay-logged-in"
-            >
-              Stay Logged In
-            </button>,
-            <button
-              className="ds-c-button ds-c-button--primary ds-u-margin-right--1"
-              key="Log Out"
-              aria-label={logOutText}
-              onClick={logoutClick}
-              data-testid="timeout-log-out"
-            >
-              {logOutText}
-            </button>,
-          ]}
-        >
-          {body}
-        </Dialog>
-      )}
+      <Dialog
+        isOpen={showTimeout}
+        onExit={refreshAuth}
+        data-testid="timeout-dialog"
+        heading="You are about to be logged out."
+        actions={[
+          <button
+            className="ds-c-button ds-u-margin-right--1"
+            disabled={expired}
+            key="Stay Logged In"
+            aria-label="Stay Logged In"
+            onClick={refreshAuth}
+            data-testid="timeout-stay-logged-in"
+          >
+            Stay Logged In
+          </button>,
+          <button
+            className="ds-c-button ds-c-button--solid ds-u-margin-right--1"
+            key="Log Out"
+            aria-label={logOutText}
+            onClick={logoutClick}
+            data-testid="timeout-log-out"
+          >
+            {logOutText}
+          </button>,
+        ]}
+      >
+        {body}
+      </Dialog>
     </>
   );
 };

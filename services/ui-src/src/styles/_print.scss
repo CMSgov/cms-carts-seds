@@ -25,7 +25,7 @@
   }
 
   .print-all-btn {
-    margin: 2.2rem;
+    margin: (variables.$margin * 2) 0 0 (variables.$margin * 2);
   }
 
   .print-directions {
@@ -33,12 +33,11 @@
     border-radius: variables.$border-radius;
     box-shadow: 2px 3px 4px #aaa;
     margin: 2.2rem auto;
-    max-width: 90%;
     text-align: center;
     width: auto;
 
     .print-all-btn {
-      margin: 0 2.2rem 1.2rem 2.2rem;
+      margin: 1.2rem 2.2rem 1.2rem 2.2rem;
     }
   }
 

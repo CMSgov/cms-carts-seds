@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 const UserProfile = () => {
   const currentUser = useSelector((state) => state.stateUser.currentUser);
   return (
-    <div className="page-info ds-l-container">
+    <div className="page-info ds-l-container ds-content">
       <div className="ds-l-col--12">
         <header>
           <h1>User Profile</h1>

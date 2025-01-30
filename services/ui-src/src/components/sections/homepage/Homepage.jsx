@@ -30,7 +30,7 @@ function formatStateStatus(item) {
 const Homepage = ({ reportStatus, getFiscalYearTemplateLink }) => {
   return (
     <main className="homepage">
-      <div className="ds-l-container">
+      <div className="ds-l-container ds-content">
         <div className="ds-l-row ds-u-padding-left--2">
           <h1 className="page-title ds-u-margin-bottom--0">
             CHIP Annual Reporting Template System (CARTS)
@@ -41,7 +41,7 @@ const Homepage = ({ reportStatus, getFiscalYearTemplateLink }) => {
           <div className="reports ds-l-col--12">
             <div className="carts-report preview__grid">
               <div className="ds-l-row">
-                <legend className="ds-u-padding--2 ds-h3">All Reports</legend>
+                <h3 className="ds-u-padding--2">All Reports</h3>
               </div>
               <div className="report-header ds-l-row">
                 <div className="name ds-l-col--2">Year</div>

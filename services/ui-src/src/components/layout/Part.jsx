@@ -74,13 +74,7 @@ const Part = ({ partId, partNumber, nestedSubsectionTitle, printView }) => {
       );
     } else {
       if (contextData) {
-        return (
-          <Alert>
-            <div className="ds-c-alert__text" data-testid="part-alert">
-              {contextData.skip_text && <p>{contextData.skip_text}</p>}
-            </div>
-          </Alert>
-        );
+        return <Alert>{contextData.skip_text && contextData.skip_text}</Alert>;
       }
     }
   };

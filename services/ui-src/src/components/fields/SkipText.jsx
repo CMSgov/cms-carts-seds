@@ -3,9 +3,7 @@ import PropTypes from "prop-types";
 import { Alert } from "@cmsgov/design-system";
 
 const SkipText = ({ question: { skip_text: skipText } }) => (
-  <Alert>
-    <p className="ds-c-alert__text">{skipText}</p>
-  </Alert>
+  <Alert>{skipText}</Alert>
 );
 SkipText.propTypes = {
   question: PropTypes.shape({

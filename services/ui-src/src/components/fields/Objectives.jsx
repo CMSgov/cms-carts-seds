@@ -83,7 +83,7 @@ const Objectives = ({
           disabled={disabled}
           onClick={add}
           type="button"
-          className="add-objective ds-c-button ds-c-button--primary"
+          className="add-objective ds-c-button ds-c-button--solid"
         >
           Add another objective
           <FontAwesomeIcon icon={faPlus} />
