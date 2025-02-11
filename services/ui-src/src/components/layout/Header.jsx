@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useSelector, shallowEqual } from "react-redux";
 // components
-import UsaBanner from "@cmsgov/design-system/dist/components/UsaBanner/UsaBanner";
+import { UsaBanner } from "@cmsgov/design-system";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import Autosave from "./Autosave";
@@ -83,8 +83,11 @@ export const Header = () => {
       <header className="header">
         <div className="ds-l-container">
           <div className="ds-l-row header-row">
-            <div className="site-title ds-l-col--8 ds-u-padding-right--2 ds-u-padding-top--1">
-              <Link to="/" className="ds-u-display--inline-block">
+            <div className="site-title ds-l-col--8 ds-u-padding-right--2">
+              <Link
+                to="/"
+                className="ds-u-display--inline-block  ds-u-padding-top--1"
+              >
                 <img
                   id="carts-logo"
                   src={appLogo}

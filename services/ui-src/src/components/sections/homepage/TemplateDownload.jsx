@@ -18,7 +18,7 @@ const TemplateDownload = ({ getTemplate }) => {
       <div className="updates ds-l-col--12">
         <p className="update-title">Updates from Central Office</p>
         {useFlags().release2024 && (
-          <div className="preamble">
+          <div className="preamble ds-content">
             <p>
               Completing the Children’s Health Insurance Program (CHIP) Annual
               Report is required under sections 2108(a) and 2108(e) of the
@@ -65,7 +65,7 @@ const TemplateDownload = ({ getTemplate }) => {
             </p>
             <div className="download">
               <button
-                className="ds-c-button ds-c-button--primary"
+                className="ds-c-button ds-c-button--solid"
                 onClick={() => getTemplate(currentYear)}
               >
                 <span className="button-display">Download template</span>
@@ -73,7 +73,6 @@ const TemplateDownload = ({ getTemplate }) => {
                   <FontAwesomeIcon
                     icon={faArrowDown}
                     transform="up-2 right-2"
-                    position
                   />
                   <FontAwesomeIcon
                     icon={faMinus}

@@ -15,7 +15,7 @@ import { setAnswerEntry } from "../../actions/initial";
 import PropTypes from "prop-types";
 import { REPORT_STATUS, AppRoles } from "../../types";
 
-const UploadComponent = ({ question }) => {
+const UploadComponent = ({ question, ...props }) => {
   // eslint-disable-next-line no-unused-vars
   const [blockFileSubmission, setBlockFileSubmission] = useState(true);
   const [loadedFiles, setLoadedFiles] = useState([]);
@@ -182,7 +182,8 @@ const UploadComponent = ({ question }) => {
     const stateReportStatus = reportStatus[`${stateCode}${year}`];
     submissionsAllowed =
       stateReportStatus.status !== REPORT_STATUS.certified &&
-      user.role === AppRoles.STATE_USER;
+      user.role === AppRoles.STATE_USER &&
+      !props?.disabled;
   }
 
   return (

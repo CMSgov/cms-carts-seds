@@ -13,10 +13,10 @@ const Section = ({ subsectionId, sectionId, printView }) => {
   const title = selectSectionTitle(formData, sectionId);
 
   return (
-    <div className="section-basic-info ds-l-col--9 content">
+    <div className="section-basic-info ds-l-col--9 content ds-content">
       <main id="main-content" className="main">
         <PageInfo />
-        <h2 data-testid="section-title">{title}</h2>
+        {title && <h2 data-testid="section-title">{title}</h2>}
         <Subsection
           key={subsectionId}
           subsectionId={subsectionId}

@@ -5,16 +5,28 @@
 **********************/
 .errors,
 .error {
-  color: #e31c3d;
-}
-
-.label-radio {
-  margin: 2rem;
+  color: variables.$danger-red;
 }
 
 .radio-container {
-  margin: 2rem 0;
+  padding-top: variables.$padding * 4;
+  input {
+    display: inline-block;
+  }
+
+  label {
+    margin-left: (variables.$margin);
+  }
+  
+  .radio-children {
+    margin-left: (variables.$margin * 8);
+  }
 }
+
+input[type=checkbox] + label, input[type=radio] + label {
+  display: inline;
+}
+
 
 .ds-u-color--error {
   position: absolute;
@@ -22,7 +34,7 @@
 }
 
 .ds-c-field--error {
-  border: 2px solid #e31c3d;
+  border: 2px solid variables.$danger-red;
 }
 
 .ds-c-label {
@@ -119,10 +131,6 @@
 
 .ds-c-accordion__heading:not(:first-child) {
   margin-top: variables.$margin * 3;
-}
-
-.radio-container .radio-children {
-  margin-left: (variables.$margin * 8);
 }
 
 .question-container {
@@ -292,7 +300,7 @@
 .fpl-container {
   align-items: baseline;
   display: flex;
-  max-width: 150px;
+  max-width: 170px;
   position: relative;
   width: auto;
 
@@ -344,11 +352,11 @@
       text-align: right;
     }
     .form-button {
-      margin: variables.$margin 0;
+      margin: 0;
 
       @media only screen and (min-width: 767px) {
         display: inline-block;
-        margin: variables.$margin;
+        margin: 0 variables.$margin;
       }
     }
   }
@@ -400,11 +408,37 @@
   }
 }
 
-.form-footer .autosave {
-  float: left;
-  margin: 64px 0 16px;
-  text-align: center;
-  width: 48%;
+.ds-c-button--danger {
+  background-color: variables.$danger-red;
+  border-color: transparent;
+  color: #fff;
+
+  &:hover {
+    background-color: variables.$danger-red-darker;
+    border-color: transparent;
+    color: #fff;
+  }
+}
+
+.ds-c-vertical-nav__label--parent {
+  text-align: left;
+}
+
+.form-footer {
+  .autosave {
+    float: left;
+    margin: 64px 0 16px;
+    text-align: center;
+    width: 48%;
+  }
+    
+  button {
+    display: block;
+  }
+
+  .action-buttons button {
+    display: inline-block
+  }
 }
 
 .dropdown-container {
@@ -424,6 +458,10 @@
   .multi-select {
     width: 50%;
   }
+}
+
+.autosave {
+  margin-top: 1em;
 }
 
 @media only screen and (min-width: 767px) {
@@ -537,4 +575,12 @@
 
 .print-text-area {
   display: none;
+}
+
+.certify-button {
+  margin-top: variables.$margin * 2;
+}
+
+.return-home-button {
+  margin-top: variables.$margin * 2;
 }

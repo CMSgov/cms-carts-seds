@@ -109,7 +109,9 @@ describe("<Integer />", () => {
     const input = screen.getByRole("textbox");
     fireEvent.change(input, { target: { value: "raw text" } });
     expect(screen.queryByDisplayValue("raw text")).not.toBeInTheDocument();
-    expect(screen.getByRole("alert")).toBeInTheDocument();
+    expect(
+      screen.getByText("Please enter whole numbers only")
+    ).toBeInTheDocument();
   });
 
   it("should show <11 if passed >0 and <=10 with printView and lessThanEleven", () => {

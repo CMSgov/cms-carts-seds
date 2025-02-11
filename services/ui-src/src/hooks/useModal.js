@@ -1,15 +1,18 @@
 import { useState } from "react";
 
 const useModal = () => {
-  const [isShowing, setIsShowing] = useState(false);
-
-  function toggleModal() {
-    setIsShowing(!isShowing);
-  }
+  const [dialogOpen, updateOpen] = useState(false);
+  const showModal = () => {
+    updateOpen(true);
+  };
+  const hideModal = () => {
+    updateOpen(false);
+  };
 
   return {
-    isShowing,
-    toggleModal,
+    dialogOpen,
+    showModal,
+    hideModal,
   };
 };
 

@@ -6,7 +6,7 @@ const Autosave = () => (
     <div className="ds-l-row">
       <div className="ds-l-col">
         <Button
-          className="ds-c-button--transparent"
+          className="ds-c-button--ghost"
           title="Last edited 3 minutes ago"
           disabled
         >

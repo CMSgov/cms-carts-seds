@@ -41,15 +41,13 @@ const Radio = ({ onChange, onClick, question, ...props }) => {
           onClick={unCheck}
           id={props.name + "-" + value}
         />
-        <label className="label-radio" htmlFor={props.name + "-" + value}>
-          {label}
-        </label>
+        <label htmlFor={props.name + "-" + value}>{label}</label>
         {isChecked && children}
       </div>
     );
   });
 
-  return <div className="ds-c-fieldset">{radioButttonList}</div>;
+  return <div>{radioButttonList}</div>;
 };
 Radio.propTypes = {
   onChange: PropTypes.func.isRequired,

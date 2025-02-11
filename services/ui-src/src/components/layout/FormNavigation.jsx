@@ -114,7 +114,7 @@ const FormNavigation = () => {
             <div className="form-button next">
               <Button
                 type="submit"
-                className="ds-c-button ds-c-button--primary"
+                className="ds-c-button ds-c-button--solid"
                 onClick={() => {
                   history.push(nextUrl);
                 }}
