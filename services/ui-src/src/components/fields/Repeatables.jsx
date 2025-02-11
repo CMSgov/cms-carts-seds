@@ -94,7 +94,7 @@ const Repeatables = ({
           disabled={disabled}
           onClick={add}
           type="button"
-          className="add-objective ds-c-button ds-c-button--primary"
+          className="add-objective ds-c-button ds-c-button--solid"
         >
           Add another{question.typeLabel && ` ${question.typeLabel}`}
           <FontAwesomeIcon icon={faPlus} />

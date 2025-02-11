@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import * as serviceWorker from "./serviceWorker";
 import { Provider } from "react-redux";
+import { UserProvider } from "./hooks/authHooks";
 import store from "./store/storeIndex";
 import BrowserIssue from "./components/layout/BrowserIssue";
 import App from "./App";
@@ -67,7 +68,11 @@ const ldClientId = config.REACT_APP_LD_SDK_CLIENT;
     <React.StrictMode>
       <Router>
         <Provider store={store}>
-          <LDProvider>{isIE || isEdge ? <BrowserIssue /> : <App />}</LDProvider>
+          <UserProvider>
+            <LDProvider>
+              {isIE || isEdge ? <BrowserIssue /> : <App />}
+            </LDProvider>
+          </UserProvider>
         </Provider>
       </Router>
     </React.StrictMode>,

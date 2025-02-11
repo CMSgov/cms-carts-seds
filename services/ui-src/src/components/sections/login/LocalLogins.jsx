@@ -1,10 +1,10 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useFormFields } from "../../../hooks/useFormFields";
 import { loginUser } from "../../../util/apiLib";
 
 const LocalLogin = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const [fields, handleFieldChange] = useFormFields({
     email: "",
     password: "",
@@ -13,7 +13,7 @@ const LocalLogin = () => {
     event.preventDefault();
     try {
       await loginUser(fields.email, fields.password);
-      history.push("/");
+      navigate(`/`);
     } catch (error) {
       console.log("Error while logging in.", error); // eslint-disable-line no-console
     }
@@ -49,7 +49,7 @@ const LocalLogin = () => {
         </label>
         <br />
         <button
-          className="ds-c-button ds-c-button--primary"
+          className="ds-c-button ds-c-button--solid"
           colorScheme="teal"
           isFullWidth
           type="submit"
@@ -72,7 +72,7 @@ export const LocalLogins = ({ loginWithIDM }) => {
       <div className="login-option">
         <h2>Log In with IDM</h2>
         <button
-          className="ds-c-button ds-c-button--primary"
+          className="ds-c-button ds-c-button--solid"
           onClick={loginWithIDM}
         >
           Login with IDM

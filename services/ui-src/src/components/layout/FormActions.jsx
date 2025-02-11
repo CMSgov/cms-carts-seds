@@ -124,7 +124,7 @@ const FormActions = () => {
     <section className="action-buttons">
       <div className="print-button">
         <Button
-          className="ds-c-button--primary ds-c-button--small"
+          className="ds-c-button--solid ds-c-button--small"
           onClick={togglePrintDialogue}
           title="Print"
           data-testid="print-show"
@@ -136,7 +136,7 @@ const FormActions = () => {
         <div className="print-dialogue" ref={printDialogeRef}>
           <div className="close">
             <Button
-              className="ds-c-button--transparent ds-c-button--small"
+              className="ds-c-button--ghost ds-c-button--small"
               onClick={togglePrintDialogue}
               data-testid="print-hide"
               title="close"
@@ -148,7 +148,7 @@ const FormActions = () => {
           <div className="print-options">
             <div className="print-page">
               <Button
-                className="ds-c-button--primary ds-c-button--small"
+                className="ds-c-button--solid ds-c-button--small"
                 href={printFormUrl(
                   currentUser,
                   formYear,
@@ -165,7 +165,7 @@ const FormActions = () => {
             </div>
             <div className="print-form">
               <Button
-                className="ds-c-button--primary ds-c-button--small"
+                className="ds-c-button--solid ds-c-button--small"
                 href={printFormUrl(currentUser, formYear)}
                 title="Entire Form"
                 target="_blank"

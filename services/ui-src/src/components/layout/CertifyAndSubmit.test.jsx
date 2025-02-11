@@ -10,6 +10,14 @@ import { AppRoles } from "../../types";
 jest.mock("../../actions/initial", () => ({
   loadForm: () => ({ type: "none" }),
 }));
+
+const mockedUsedNavigate = jest.fn();
+
+jest.mock("react-router-dom", () => ({
+  ...jest.requireActual("react-router-dom"),
+  useNavigate: () => mockedUsedNavigate,
+}));
+
 const mockStore = configureMockStore();
 const store = mockStore({
   save: { lastSave: new Date() },

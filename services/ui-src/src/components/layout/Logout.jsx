@@ -9,7 +9,7 @@ const Logout = () => {
   return (
     <Button
       type="button"
-      variation="transparent"
+      variation="ghost"
       onClick={logout}
       data-testid="logout"
     >
