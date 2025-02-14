@@ -65,7 +65,7 @@ const TemplateDownload = ({ getTemplate }) => {
             </p>
             <div className="download">
               <button
-                className="ds-c-button ds-c-button--primary"
+                className="ds-c-button ds-c-button--solid"
                 onClick={() => getTemplate(currentYear)}
               >
                 <span className="button-display">Download template</span>

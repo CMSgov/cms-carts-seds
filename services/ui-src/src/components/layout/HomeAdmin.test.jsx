@@ -20,6 +20,8 @@ jest.mock("../utils/InvokeSection", () => () => {
   return <MockName />;
 });
 
+window.scrollTo = jest.fn();
+
 describe("Home Admin Component", () => {
   it("should render correctly", () => {
     expect(shallow(<Home />).exists()).toBe(true);

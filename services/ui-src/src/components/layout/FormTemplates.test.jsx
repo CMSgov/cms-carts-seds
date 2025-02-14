@@ -7,12 +7,11 @@ import { apiLib } from "../../util/apiLib";
 jest.mock("../../hooks/authHooks");
 window.alert = jest.fn();
 
-const mockHistoryPush = jest.fn();
+const mockedUsedNavigate = jest.fn();
+
 jest.mock("react-router-dom", () => ({
   ...jest.requireActual("react-router-dom"),
-  useHistory: () => ({
-    push: mockHistoryPush,
-  }),
+  useNavigate: () => mockedUsedNavigate,
 }));
 
 const formTemplate = <FormTemplates />;
@@ -33,6 +32,6 @@ describe("FormTemplates Component", () => {
       fireEvent.click(generateButton);
     });
     expect(apiSpy).toHaveBeenCalled();
-    expect(mockHistoryPush).toHaveBeenCalledWith("/");
+    expect(mockedUsedNavigate).toHaveBeenCalledWith("/");
   });
 });

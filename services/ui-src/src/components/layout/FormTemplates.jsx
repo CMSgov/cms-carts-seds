@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Button } from "@cmsgov/design-system";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { apiLib } from "../../util/apiLib";
 import { useFlags } from "launchdarkly-react-client-sdk";
 
 const FormTemplates = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const [inProgress, setInprogress] = useState(false);
 
   const handleUpdateTemplates = async () => {
@@ -18,7 +18,7 @@ const FormTemplates = () => {
       };
       await apiLib.post("/formTemplates", opts);
       window.alert("Request Completed");
-      history.push("/");
+      navigate("/");
     } catch (e) {
       window.alert("Error - Contact Support");
     }
@@ -47,7 +47,7 @@ const FormTemplates = () => {
         </select>
         <Button
           type="button"
-          className="ds-c-button ds-c-button--primary"
+          className="ds-c-button ds-c-button--solid"
           onClick={handleUpdateTemplates}
           disabled={inProgress}
           data-testid="generate-forms-button"

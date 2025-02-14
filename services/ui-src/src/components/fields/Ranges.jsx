@@ -224,7 +224,7 @@ const Ranges = ({ onChange, question, ...props }) => {
         <Button
           onClick={addRow}
           type="button"
-          variation="primary"
+          variation="solid"
           disabled={props.disabled}
         >
           Add another? <FontAwesomeIcon icon={faPlus} />
@@ -234,7 +234,7 @@ const Ranges = ({ onChange, question, ...props }) => {
         <Button
           onClick={removeRow}
           type="button"
-          variation="primary"
+          variation="solid"
           disabled={props.disabled}
         >
           Remove Last Entry <FontAwesomeIcon icon={faMinusCircle} />

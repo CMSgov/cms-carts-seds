@@ -99,7 +99,7 @@ const ReportItem = ({
               heading="Uncertify this Report?"
               actions={[
                 <button
-                  className="ds-c-button ds-c-button--primary ds-u-margin-right--1"
+                  className="ds-c-button ds-c-button--solid ds-u-margin-right--1"
                   key="primary"
                   onClick={uncertify}
                   aria-label="Uncertify this Report"

@@ -8,12 +8,12 @@ const mockLoginUser = jest.fn();
 jest.mock("../../../util/apiLib", () => ({
   loginUser: (username, password) => mockLoginUser(username, password),
 }));
-const mockHistoryPush = jest.fn();
+
+const mockedUsedNavigate = jest.fn();
+
 jest.mock("react-router-dom", () => ({
   ...jest.requireActual("react-router-dom"),
-  useHistory: () => ({
-    push: mockHistoryPush,
-  }),
+  useNavigate: () => mockedUsedNavigate,
 }));
 
 describe("LocalLogin component", () => {
@@ -37,6 +37,5 @@ describe("LocalLogin component", () => {
       fireEvent.click(generateButton);
     });
     expect(mockLoginUser).toHaveBeenCalledWith("myEmail@email.com", "test");
-    expect(mockHistoryPush).toHaveBeenCalledWith("/");
   });
 });

@@ -19,6 +19,7 @@ jest.mock("./hooks/authHooks", () => ({
     showTimeout: false,
     expiresAt: null,
   })),
+  updateTimeout: jest.fn(),
   initAuthManager: jest.fn(),
 }));
 jest.mock("./components/layout/Home", () => () => {

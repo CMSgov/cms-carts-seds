@@ -1,18 +1,13 @@
 import { useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function ScrollToTop() {
-  const history = useHistory();
+  const location = useLocation();
   useEffect(() => {
-    const unlisten = history.listen(() => {
-      window.scrollTo(0, 0);
-      // Remove focus from clicked button
-      document.activeElement.blur();
-    });
-    return () => {
-      unlisten();
-    };
-  }, []);
+    window.scrollTo(0, 0);
+    // Remove focus from clicked button
+    document.activeElement.blur();
+  }, [location]);
 
   return null;
 }
